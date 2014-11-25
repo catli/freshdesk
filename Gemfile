@@ -40,3 +40,14 @@ gem 'bootstrap-sass'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+#create seperate data group since heroku will only work with pg
+group :development, :test do 
+	gem 'sqlite3'
+end
+
+group :production do 
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
