@@ -7,12 +7,11 @@
   <%= csrf_meta_tags %>	
 </head>
 <body>
-	<nav>
-		<%=link_to "home",root_path %>
-		<%=link_to "about",about_path %>
-	</nav>
+		<%=render 'layouts/header' %>   <!--renders  the partial code stored in layouts/_header.html.erb-->
 
-<%= yield %>
+	<div class="container">  
+		<%= yield %>
+	</div>
 
 </body>
 </html>
