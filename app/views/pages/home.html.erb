@@ -1,8 +1,20 @@
 
 <div class="jumbotron center">
 	<h1>Freshdesk Analysis</h1>
-	<p> This project will generate historical analysis of freshdesk tickets
-		 
-		<%=link_to "LOG IN","#", class: "btn btn-primary"%>
-	</p>
+	
+	<% if user_signed_in? %> <!-- devise: control flow logic  -->
+			<p>  Let's start generating historical analysis of freshdesk tickets! </p>
+
+	<% else %>
+
+		<p> This project will generate historical analysis of freshdesk tickets
+			 
+			<%=link_to "LOG IN",new_user_session_path, class: "btn btn-primary"%>
+			<%=link_to "SIGN UP",new_user_registration_path, class: "btn btn-default"%>
+
+		</p>
+
+	<% end %>
+
+
 </div>

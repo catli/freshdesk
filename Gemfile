@@ -38,6 +38,7 @@ gem 'bootstrap-sass'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise', '~> 3.4.0'
 
 #create seperate data group since heroku will only work with pg
 group :development, :test do 

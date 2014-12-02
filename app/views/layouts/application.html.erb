@@ -10,7 +10,14 @@
 		<%=render 'layouts/header' %>   <!--renders  the partial code stored in layouts/_header.html.erb-->
 
 	<div class="container">  
+
+		<!--creates flash message for devise, does not need = since html not generated-->
+		<% flash.each do |name,msg| %> 
+			<%= content_tag(:div, msg, class:"alert alert-info") %>
+		<% end %>
+		
 		<%= yield %>
+
 	</div>
 
 </body>
